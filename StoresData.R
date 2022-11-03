@@ -64,3 +64,21 @@ unique(Stores$Store_Area)
 #My intention is now to break the data up by quartiles into a list with 4 
 #elements, perform separate visualisations and then explore them via a 
 #facet grid!
+
+Stores_Fourth <- Stores[Stores$Store_Sales>=71873,]
+Stores_Third <- Stores[(Stores$Store_Sales>=59351)&(Stores$Store_Sales<71873),]
+Stores_Second <- Stores[(Stores$Store_Sales>=46530)&(Stores$Store_Sales<59351),]
+Stores_First <- Stores[Stores$Store_Sales<46530,]
+#Now check out some summary data
+summary(Stores_Fourth)
+summary(Stores_Third)
+summary(Stores_Second)
+summary(Stores_First)
+str(Stores_First)
+summary(Stores_Second)
+summary(Stores_Third)
+summary(Stores_Fourth)
+#Now construct some lists.
+#We want to know.
+#Now we need to think about how we are going to analyse these quartiles. It's
+#probably more important to try to group by Store Area!
